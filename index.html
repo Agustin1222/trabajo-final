@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <form
+        action="#"
+        class="container-login"
+        action="/api/login"
+        method="post"
+        class="container-login"
+      >
+        <h1>Login</h1>
+        <h2>Hey, Ingresa tus datos para iniciar sesion en tu cuenta.</h2>
+        <input type="email" placeholder="Correo electrónico" />
+        <div class="input-password">
+          <input type="password" placeholder="Contraseña" id="input-password" />
+          <button class="btn-hide-show">
+            <i class="fa-solid fa-eye" id="show-password"></i>
+            <i class="fa-solid fa-eye-slash" id="hide-password"></i>
+          </button>
+        </div>
+
+        <p class="paragraph-1">¿Tienes problemas para iniciar sesión?</p>
+
+        <button type="submit" class="btn-sign-in">Iniciar sesión</button>
+
+        <p class="paragraph-2">-O inicia sesión con -</p>
+        <div class="container-btn-login-with">
+          <button class="btn-login-with">
+            <i class="fa-brands fa-google"></i>Google
+          </button>
+          <button class="btn-login-with">
+            <i class="fa-brands fa-apple"></i>Apple ID
+          </button>
+          <button class="btn-login-with">
+            <i class="fa-brands fa-facebook"></i>Facebook
+          </button>
+        </div>
+        <p class="create-account">
+          ¿No tienes una cuenta? <a href="#" class="">Registrate ahora</a>
+        </p>
+      </form>
+      <div class="footer">Copyright &copy; 2024 | Política de privacidad</div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/1ba79126f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

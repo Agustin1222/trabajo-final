@@ -1,0 +1,219 @@
+:root{
+    --color-yellow: #ffcc7e;
+    --color-background: #d2cecb;
+    --color-hover: #f0f0f0;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Poppins;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+}
+.container-login{
+    background-color: #fff;
+    padding: 45px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 550px;
+}
+.container-login h1{
+text-align: center;
+margin-bottom: 15px;
+font-weight: 900;
+}
+
+.container-login h2{
+text-align: center;
+font-weight: 600;
+font-size: 18px;
+margin-bottom: 40px;
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    font-size: 15px;
+    color: #000;
+
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #55c57a;
+}
+
+input:focus:invalid{
+    border: 2px solid #ff7730;
+}
+
+input::-webkit-input-placeholder{
+    color: #878b8b;
+    font-weight: 500;
+    
+}
+
+input:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.input-password{
+    position: relative;
+}
+
+.btn-hide-show{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#show-password{
+    display: none;
+}
+
+.paragraph-2 {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.btn-sign-in{
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    background-color: var(--color-yellow);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.paragrahp-2 {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 25px 0;
+    text-align: center;
+}
+.container-btn-login-with{
+    display: flex;
+    gap: 10px;
+}
+.btn-login-with{
+    flex: 1;
+    border: 1px solid #eee;
+    background: none;
+    padding: 15px;
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn-login-with:hover {
+    background-color: var(--color-hover);
+
+}
+.btn-login-with i{
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.create-account{
+    text-align:center;
+    margin-top: 25px;
+    font-weight: 500;
+
+}
+.create-account{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+.footer{
+    text-align: center;
+    font-weight: 600;
+
+}
+
+Agregar sombras y bordes
+
+.container-login {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+Estilo de botones de inicio de sesión y redes sociales
+
+.btn-sign-in,
+.btn-login-with {
+    background-color: var(--color-yellow);
+    color: #000000;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-sign-in:hover,
+.btn-login-with:hover {
+    background-color: darken(var(--color-yellow), 10%);
+}
+Agregar márgenes y espacio adicional
+.container-login {
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.container-btn-login-with {
+    margin-top: 15px;
+}
+Estilizar el enlace de registro
+.create-account a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--color-yellow);
+    transition: color 0.3s ease;
+}
+
+.create-account a:hover {
+    color: darken(var(--color-yellow), 20%);
+}
+
+body {
+    font-family: Poppins;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('moon-4970289_1280.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
