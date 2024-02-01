@@ -9,27 +9,29 @@
   <body>
     <div class="container">
       <form
-        action="#"
         class="container-login"
-        action="/api/login"
-        method="post"
-        class="container-login"
+        id="loginForm"
       >
         <h1>Login</h1>
-        <h2>Hey, Ingresa tus datos para iniciar sesion en tu cuenta.</h2>
-        <input type="email" placeholder="Correo electrónico" />
+        <h2>Hey, Ingresa tus datos para iniciar sesión en tu cuenta.</h2>
+        <input type="email" placeholder="Correo electrónico" name="email" />
         <div class="input-password">
-          <input type="password" placeholder="Contraseña" id="input-password" />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            id="input-password"
+            name="password"
+          />
           <button class="btn-hide-show">
             <i class="fa-solid fa-eye" id="show-password"></i>
             <i class="fa-solid fa-eye-slash" id="hide-password"></i>
           </button>
         </div>
-
+    
         <p class="paragraph-1">¿Tienes problemas para iniciar sesión?</p>
-
+    
         <button type="submit" class="btn-sign-in">Iniciar sesión</button>
-
+    
         <p class="paragraph-2">-O inicia sesión con -</p>
         <div class="container-btn-login-with">
           <button class="btn-login-with">
@@ -43,16 +45,64 @@
           </button>
         </div>
         <p class="create-account">
-          ¿No tienes una cuenta? <a href="#" class="">Registrate ahora</a>
+          ¿No tienes una cuenta? <a href="#" class="">Regístrate ahora</a>
         </p>
       </form>
       <div class="footer">Copyright &copy; 2024 | Política de privacidad</div>
     </div>
+    
 
     <script
       src="https://kit.fontawesome.com/1ba79126f6.js"
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+    
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+    
+          // Obtén los datos del formulario
+          const email = document.querySelector('input[name="email"]').value;
+          const password = document.querySelector('input[name="password"]').value;
+          const usuarioAutenticado = true;
+    
+          if (usuarioAutenticado) {
+            window.location.href = '/indexx2.html';
+          } else {
+            console.error('Autenticación fallida');
+          }
+        });
+      });
+    </script> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('loginForm');
+    
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const email = document.querySelector('input[name="email"]').value;
+          const password = document.querySelector('input[name="password"]').value;
+    
+          fetch('http://localhost:9000/autenticar', {
+            method: 'POST',
+            body: JSON.stringify({ email, password}),
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.token) {
+              window.location.href = '/indexx2.html';
+            } else {
+              alert('Error de autenticación. Verifica tu correo electrónico y contraseña.');
+            }
+          })
+          .catch(error => {
+            console.error('Error al autenticar:', error);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
